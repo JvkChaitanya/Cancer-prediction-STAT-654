@@ -1,0 +1,49 @@
+{
+  "total_genes": 20221,
+  "significant_genes_fdr_005": 19564,
+  "large_effect_genes_eta_014": 13492,
+  "top_20_genes": [
+    "gene_16337",
+    "gene_3921",
+    "gene_3461",
+    "gene_3439",
+    "gene_6733",
+    "gene_450",
+    "gene_1510",
+    "gene_18135",
+    "gene_16259",
+    "gene_11059",
+    "gene_220",
+    "gene_7896",
+    "gene_219",
+    "gene_7116",
+    "gene_3737",
+    "gene_203",
+    "gene_7238",
+    "gene_12808",
+    "gene_11903",
+    "gene_15898"
+  ],
+  "pca_components_95var": 529,
+  "pca_variance_pc1": 0.10561939158594782,
+  "pca_variance_pc2": 0.08772535415573025,
+  "pca_variance_pc3": 0.07826331356836666,
+  "pca_2d_total_variance": 0.1933447457416781,
+  "pca_3d_total_variance": 0.2716080593100467,
+  "spearman_anova_kw": 0.9814603528445701,
+  "topk_overlap_anova_kw": {
+    "20": 0.1,
+    "50": 0.12,
+    "100": 0.26,
+    "500": 0.548,
+    "1000": 0.687
+  },
+  "feature_sets_prepared": [
+    20,
+    50,
+    100,
+    500,
+    "PCA-95%"
+  ],
+  "recommendation": "use features_pca95.csv for modeling"
+}

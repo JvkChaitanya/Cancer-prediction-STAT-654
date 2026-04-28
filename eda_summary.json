@@ -1,0 +1,25 @@
+{
+  "original_shape": "801 samples x 20531 genes",
+  "cleaned_shape": "801 samples x 20221 genes",
+  "missing_values": 0,
+  "duplicate_rows": 0,
+  "constant_genes_dropped": 267,
+  "low_variance_genes_dropped": 43,
+  "total_genes_removed": 310,
+  "matrix_sparsity": "12.90%",
+  "classes": [
+    "BRCA",
+    "COAD",
+    "KIRC",
+    "LUAD",
+    "PRAD"
+  ],
+  "class_counts": {
+    "BRCA": 300,
+    "KIRC": 146,
+    "LUAD": 141,
+    "PRAD": 136,
+    "COAD": 78
+  },
+  "imbalance_ratio": 3.85
+}
