@@ -1,4 +1,4 @@
-# Cancer RNA-Seq Classification — STAT_PRO_2
+# Cancer RNA-Seq Classification
 
 A multi-class classifier that identifies the cancer type of a patient's tumour from RNA-seq gene-expression profiles. Uses the TCGA Pan-Cancer subset (801 patients × 20,531 genes) and distinguishes between **BRCA**, **KIRC**, **LUAD**, **COAD**, and **PRAD**.
 
