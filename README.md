@@ -239,4 +239,4 @@ Gradient Boosting consistently wins; KNN collapses (curse of dimensionality on ~
 ## License & attribution
 
 - **Dataset**: UCI Machine Learning Repository — *Gene Expression Cancer RNA-Seq* (TCGA Pan-Cancer subset). See Weinstein et al. (2013), *Nature Genetics* 45, 1113–1120.
-- **Course**: STAT 654 — Machine Learning, 2026.
+- **Course**: STAT 654 — STAT COMPUTING WITH R & PYTHON, 2026.
