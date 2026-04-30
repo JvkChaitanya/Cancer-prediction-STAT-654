@@ -1,0 +1,12 @@
+{
+  "best_model": "Gradient Boosting",
+  "best_params": {
+    "learning_rate": 0.2,
+    "max_depth": 3,
+    "n_estimators": 100
+  },
+  "best_cv_score": 0.96875,
+  "test_accuracy_before_tuning": 0.9565217391304348,
+  "test_accuracy_after_tuning": 0.9565217391304348,
+  "improvement": 0.0
+}

@@ -1,0 +1,141 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{who2022cancer}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Clinical Context}{1}{subsection.1.1}\protected@file@percent }
+\citation{elmore2015diagnostic}
+\citation{varadhachary2014cancer}
+\citation{weinstein2013cancer}
+\citation{uci_rnaseq}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Molecular Profiling as an Alternative}{2}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Objectives}{2}{subsection.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Paper Organization}{2}{subsection.1.4}\protected@file@percent }
+\citation{li2011rsem}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Dataset}{3}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Source and Biological Background}{3}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Expression Quantification: RSEM and the $\log _2$ Transform}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}The 20{,}531 Gene Features}{3}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}The Five Cancer Types}{3}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Class Distribution and Imbalance}{4}{subsection.2.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Class distribution in the TCGA RNA-Seq dataset.}}{4}{table.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:classes}{{1}{4}{Class distribution in the TCGA RNA-Seq dataset}{table.caption.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Data Cleaning and Exploratory Data Analysis}{4}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Quality Control Checks}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Low-Variance Gene Removal}{5}{subsection.3.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Summary of data cleaning steps.}}{5}{table.caption.2}\protected@file@percent }
+\newlabel{tab:cleaning}{{2}{5}{Summary of data cleaning steps}{table.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Why We Chose Variance $< 0.001$ as the Threshold}{5}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Outlier Retention: A Deliberate Choice}{5}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Sparsity Analysis}{6}{subsection.3.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Sparsity analysis. Left: fraction of zero values per gene (right-skewed; most genes are detected in all samples). Right: fraction of zeros per sample (narrow, centered $\sim $13\%, no quality-control outliers).}}{6}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:sparsity}{{1}{6}{Sparsity analysis. Left: fraction of zero values per gene (right-skewed; most genes are detected in all samples). Right: fraction of zeros per sample (narrow, centered $\sim $13\%, no quality-control outliers)}{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Exploratory Visualizations}{6}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Class Distribution.}{6}{section*.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Distribution of tumor classes across 801 samples. BRCA dominates at 37.5\%; COAD is the minority at 9.7\%.}}{7}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:class_dist}{{2}{7}{Distribution of tumor classes across 801 samples. BRCA dominates at 37.5\%; COAD is the minority at 9.7\%}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Top-Variance Gene Patterns.}{7}{section*.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Expression distributions of the top-6 high-variance genes, stratified by tumor class. Different genes separate different class pairs, motivating multi-gene feature approaches.}}{7}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:topvar}{{3}{7}{Expression distributions of the top-6 high-variance genes, stratified by tumor class. Different genes separate different class pairs, motivating multi-gene feature approaches}{figure.caption.7}{}}
+\citation{bellman1957dynamic}
+\citation{aggarwal2001surprising}
+\@writefile{toc}{\contentsline {paragraph}{Gene Correlation Structure.}{8}{section*.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Pearson correlation heatmap for the top-20 variance genes. Co-expression blocks reveal coordinated gene regulation, motivating PCA for decorrelation.}}{8}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:heatmap}{{4}{8}{Pearson correlation heatmap for the top-20 variance genes. Co-expression blocks reveal coordinated gene regulation, motivating PCA for decorrelation}{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Feature Engineering and Selection}{8}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Why Feature Selection Matters: The Curse of Dimensionality}{8}{subsection.4.1}\protected@file@percent }
+\citation{benjamini1995controlling}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Stage 1: Statistical Gene Ranking}{9}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}One-Way ANOVA F-Test}{9}{subsubsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Multiple Testing Correction: Benjamini--Hochberg FDR}{9}{subsubsection.4.2.2}\protected@file@percent }
+\citation{cohen1988statistical}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}Eta-Squared ($\eta ^2$) Effect Size}{10}{subsubsection.4.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Volcano plot: $\eta ^2$ effect size vs.\ $-\log _{10}(\text  {FDR})$. Red points satisfy both FDR $< 0.05$ and $\eta ^2 \ge 0.14$ (13{,}492 genes). The dense red cluster at the upper right confirms that a large fraction of genes are both statistically significant and biologically meaningful.}}{10}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:volcano}{{5}{10}{Volcano plot: $\eta ^2$ effect size vs.\ $-\log _{10}(\text {FDR})$. Red points satisfy both FDR $< 0.05$ and $\eta ^2 \ge 0.14$ (13{,}492 genes). The dense red cluster at the upper right confirms that a large fraction of genes are both statistically significant and biologically meaningful}{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4}Kruskal--Wallis Non-Parametric Validation}{10}{subsubsection.4.2.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Top-$K$ gene set overlap between ANOVA and Kruskal--Wallis rankings.}}{11}{table.caption.11}\protected@file@percent }
+\newlabel{tab:overlap}{{3}{11}{Top-$K$ gene set overlap between ANOVA and Kruskal--Wallis rankings}{table.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Left: ANOVA-F vs.\ Kruskal--Wallis H statistics (log-scale). The tight linear relationship confirms $\rho = 0.981$. Right: Top-$K$ overlap fraction. Low overlap at small $K$ reflects tie-breaking among nearly identical scores, not disagreement about which genes matter.}}{11}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:anova_vs_kw}{{6}{11}{Left: ANOVA-F vs.\ Kruskal--Wallis H statistics (log-scale). The tight linear relationship confirms $\rho = 0.981$. Right: Top-$K$ overlap fraction. Low overlap at small $K$ reflects tie-breaking among nearly identical scores, not disagreement about which genes matter}{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Stage 2: Principal Component Analysis}{11}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Why PCA Instead of Top-$K$ Genes?}{11}{subsubsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}PCA Procedure and Results}{12}{subsubsection.4.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Left: Cumulative explained variance vs.\ number of PCA components. The 95\% threshold (red dashed line) is reached at $d^* = 529$ components. Right: Individual variance ratios for the first 20 components, showing rapid initial decay.}}{12}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:pca_var}{{7}{12}{Left: Cumulative explained variance vs.\ number of PCA components. The 95\% threshold (red dashed line) is reached at $d^* = 529$ components. Right: Individual variance ratios for the first 20 components, showing rapid initial decay}{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}Visual Confirmation of Class Separability}{13}{subsubsection.4.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces PCA 2D projection (PC1 vs.\ PC2, 19.33\% combined variance). Five cancer types form distinct clusters. KIRC is the most compact; LUAD is the most dispersed.}}{13}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:pca_2d}{{8}{13}{PCA 2D projection (PC1 vs.\ PC2, 19.33\% combined variance). Five cancer types form distinct clusters. KIRC is the most compact; LUAD is the most dispersed}{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Setup}{13}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Train--Test Split}{13}{subsection.5.1}\protected@file@percent }
+\citation{friedman2001greedy}
+\citation{breiman2001random}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Feature Scaling Protocol}{14}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Cross-Validation Protocol}{14}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Reproducibility}{14}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Classification Results}{14}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Classifiers and Their Inductive Biases}{14}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Results Overview}{15}{subsection.6.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Model comparison on PCA-95\% features (529 components). Sorted by 5-fold CV accuracy. Best values in \textbf  {bold}.}}{15}{table.caption.15}\protected@file@percent }
+\newlabel{tab:model_comparison}{{4}{15}{Model comparison on PCA-95\% features (529 components). Sorted by 5-fold CV accuracy. Best values in \textbf {bold}}{table.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Five-fold CV accuracy with $\pm 1$ standard deviation error bars. Gradient Boosting leads by a clear margin (96.25\%).}}{15}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:model_cv}{{9}{15}{Five-fold CV accuracy with $\pm 1$ standard deviation error bars. Gradient Boosting leads by a clear margin (96.25\%)}{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Test-set accuracy, precision, recall, and F1 for all eight classifiers. Gradient Boosting achieves consistently high scores across all four metrics.}}{16}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:model_metrics}{{10}{16}{Test-set accuracy, precision, recall, and F1 for all eight classifiers. Gradient Boosting achieves consistently high scores across all four metrics}{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Accuracy vs.\ training time. Gradient Boosting requires the longest training time ($\sim $102s) but delivers the highest accuracy. Decision Tree achieves 90\% CV accuracy in just 1 second.}}{16}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:acc_vs_time}{{11}{16}{Accuracy vs.\ training time. Gradient Boosting requires the longest training time ($\sim $102s) but delivers the highest accuracy. Decision Tree achieves 90\% CV accuracy in just 1 second}{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Analysis of Individual Models}{16}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Gradient Boosting (96.25\% CV, 95.65\% Test).}{16}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Decision Tree (90.16\% CV, 87.58\% Test).}{17}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Random Forest (87.03\% CV, 86.34\% Test).}{17}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{SVM (Linear) and Logistic Regression ($\sim $80\% CV, $\sim $82\% Test).}{17}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Naive Bayes (68.75\% CV, 65.22\% Test).}{17}{section*.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{SVM (RBF) (55.47\% CV, 53.42\% Test).}{17}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{K-Nearest Neighbors (28.91\% CV, 29.19\% Test).}{17}{section*.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Hyperparameter Tuning and Per-Class Analysis}{18}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}GridSearchCV Configuration}{18}{subsection.7.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces GridSearchCV hyperparameter grid for Gradient Boosting.}}{18}{table.caption.26}\protected@file@percent }
+\newlabel{tab:grid}{{5}{18}{GridSearchCV hyperparameter grid for Gradient Boosting}{table.caption.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Tuning Results}{18}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Per-Class Classification Report}{18}{subsection.7.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Per-class classification report for the tuned Gradient Boosting model ($n_{\text  {test}} = 161$).}}{19}{table.caption.27}\protected@file@percent }
+\newlabel{tab:classreport}{{6}{19}{Per-class classification report for the tuned Gradient Boosting model ($n_{\text {test}} = 161$)}{table.caption.27}{}}
+\@writefile{toc}{\contentsline {paragraph}{Key observations.}{19}{section*.28}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Confusion matrix for the tuned Gradient Boosting model. The diagonal dominates heavily. Most errors involve LUAD misclassifications, consistent with lung adenocarcinoma's known molecular heterogeneity.}}{20}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:confusion}{{12}{20}{Confusion matrix for the tuned Gradient Boosting model. The diagonal dominates heavily. Most errors involve LUAD misclassifications, consistent with lung adenocarcinoma's known molecular heterogeneity}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion}{20}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Why Gradient Boosting Outperforms All Other Models}{20}{subsection.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}The KNN Failure as a Dimensionality Case Study}{20}{subsection.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}PCA vs.\ Top-$K$ Gene Selection: Trade-offs}{21}{subsection.8.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Trade-offs between PCA and top-$K$ gene selection for modeling.}}{21}{table.caption.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}ANOVA vs.\ Kruskal--Wallis Agreement: What It Tells Us}{21}{subsection.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Generalization Gap Analysis}{21}{subsection.8.5}\protected@file@percent }
+\citation{arik2021tabnet}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Generalization gap (CV accuracy $-$ test accuracy) for each model.}}{22}{table.caption.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Limitations}{22}{subsection.8.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion and Future Directions}{22}{section.9}\protected@file@percent }
+\citation{arik2021tabnet}
+\bibstyle{plainnat}
+\bibcite{aggarwal2001surprising}{{1}{2001}{{Aggarwal et al.}}{{}}}
+\bibcite{arik2021tabnet}{{2}{2021}{{Arik and Pfister}}{{}}}
+\bibcite{bellman1957dynamic}{{3}{1957}{{Bellman}}{{}}}
+\bibcite{benjamini1995controlling}{{4}{1995}{{Benjamini and Hochberg}}{{}}}
+\bibcite{breiman2001random}{{5}{2001}{{Breiman}}{{}}}
+\bibcite{cohen1988statistical}{{6}{1988}{{Cohen}}{{}}}
+\bibcite{elmore2015diagnostic}{{7}{2015}{{Elmore et al.}}{{}}}
+\bibcite{friedman2001greedy}{{8}{2001}{{Friedman}}{{}}}
+\bibcite{kruskal1952use}{{9}{1952}{{Kruskal and Wallis}}{{}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Future Directions}{23}{subsection.9.1}\protected@file@percent }
+\bibcite{li2011rsem}{{10}{2011}{{Li and Dewey}}{{}}}
+\bibcite{scikit-learn}{{11}{2011}{{Pedregosa et al.}}{{}}}
+\bibcite{uci_rnaseq}{{12}{2016}{{UCI Machine Learning Repository}}{{}}}
+\bibcite{varadhachary2014cancer}{{13}{2014}{{Varadhachary and Raber}}{{}}}
+\bibcite{weinstein2013cancer}{{14}{2013}{{Weinstein et al.}}{{}}}
+\bibcite{who2022cancer}{{15}{2022}{{World Health Organization}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Appendix A: Top-20 Discriminative Genes}{24}{appendix.A}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Top-20 genes by ANOVA FDR. All have F $> 1{,}100$ and $\eta ^2 > 0.85$.}}{24}{table.caption.34}\protected@file@percent }
+\newlabel{tab:top20}{{9}{24}{Top-20 genes by ANOVA FDR. All have F $> 1{,}100$ and $\eta ^2 > 0.85$}{table.caption.34}{}}
+\citation{scikit-learn}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Appendix B: Software and Reproducibility}{25}{appendix.B}\protected@file@percent }
+\gdef \@abspage@last{25}
