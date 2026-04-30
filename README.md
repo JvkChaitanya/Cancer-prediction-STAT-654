@@ -54,7 +54,7 @@ Reproducibility: every random operation uses `RNG = 42`.
 ## Repository layout
 
 ```
-_2/
+STAT_PRO_2/
 ├── README.md                            ← this file
 ├── requirements.txt                     ← Python dependencies
 ├── run_pipeline.sh                      ← headless notebook runner
@@ -103,7 +103,7 @@ The CSV / JSON / PKL files are created when you run the pipeline; they don't shi
   - macOS / Linux: `~/.kaggle/kaggle.json`
   - Windows: `%USERPROFILE%\.kaggle\kaggle.json`
 
-  If you don't have Kaggle access, download `data.csv` and `labels.csv` manually from the [UCI Gene Expression Cancer RNA-Seq dataset](https://archive.ics.uci.edu/dataset/401/gene+expression+cancer+rna+seq) and drop both files into a `data/` folder inside `_2/`.
+  If you don't have Kaggle access, download `data.csv` and `labels.csv` manually from the [UCI Gene Expression Cancer RNA-Seq dataset](https://archive.ics.uci.edu/dataset/401/gene+expression+cancer+rna+seq) and drop both files into a `data/` folder inside `STAT_PRO_2/`.
 
 ---
 
@@ -111,7 +111,7 @@ The CSV / JSON / PKL files are created when you run the pipeline; they don't shi
 
 ### 1 — Clone or download the project
 ```bash
-cd _2
+cd STAT_PRO_2
 ```
 
 ### 2 — Create a virtual environment (recommended)
